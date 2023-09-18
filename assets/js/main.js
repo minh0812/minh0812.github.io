@@ -77,7 +77,7 @@ const sendEmail = (e) => {
     );
 };
 
-btnSend.setAttribute("data-callback", "sendEmail");
+btnSend.setAttribute("data-callback", "sendEmail(event)");
 /*=============== SHOW SCROLL UP ===============*/
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
