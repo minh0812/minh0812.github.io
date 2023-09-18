@@ -29,39 +29,55 @@ const linkAction = () => {
 };
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 /*=============== SHADOW HEADER ===============*/
-const shadowHeader = () =>{
-    const header = document.getElementById('header')
-    // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
-    this.scrollY >= 50 ? header.classList.add('shadow-header') 
-                       : header.classList.remove('shadow-header')
-}
-window.addEventListener('scroll', shadowHeader)
+const shadowHeader = () => {
+  const header = document.getElementById("header");
+  // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
+  this.scrollY >= 50
+    ? header.classList.add("shadow-header")
+    : header.classList.remove("shadow-header");
+};
+window.addEventListener("scroll", shadowHeader);
 /*=============== EMAIL JS ===============*/
-const contactForm = document.getElementById('contact-form')
-const contactMessage = document.getElementById('contact-message')
+const contactForm = document.getElementById("contact-form");
+const contactMessage = document.getElementById("contact-message");
+const btnSend = document.getElementsByClassName("g-recaptcha")[0];
 
-const sendEmail = (e) =>{
-  e.preventDefault()
+const sendEmail = (e) => {
+  e.preventDefault();
   // service id, template id, form, public key
-  emailjs.sendForm('service_jc9nd2h', 'template_jiin5n5', contactForm, 'bJGLfO20ad8dY_bas')
-  .then((result) => {
-      console.log(result);
-      contactMessage.innerHTML = 'Message sent successfully ✅'
-      setTimeout(() => {
-        contactMessage.innerHTML = ''
-      }, 5000);
-      // reset form
-      contactForm.reset()
-  }, (error) => {
-      console.log(error);
-      contactMessage.innerHTML = 'Message not sent (service error) ❌'
-      setTimeout(() => {
-        contactMessage.innerHTML = ''
-      }, 5000);
-  });
-}
+  emailjs
+    .sendForm(
+      "service_jc9nd2h",
+      "template_jiin5n5",
+      contactForm,
+      "bJGLfO20ad8dY_bas"
+    )
+    .then(
+      (result) => {
+        console.log(result);
+        contactMessage.innerHTML = "Message sent successfully ✅";
+        setTimeout(() => {
+          contactMessage.innerHTML = "";
+        }, 5000);
+        // reset form
+        contactForm.reset();
+      },
+      (error) => {
+        console.log(error);
+        contactMessage.innerHTML = "Message not sent (service error) ❌";
+        setTimeout(() => {
+          contactMessage.innerHTML = "";
+        }, 5000);
+      }
+    );
+};
 
-contactForm.addEventListener('submit', sendEmail)
+contactForm.addEventListener("submit", sendEmail);
+btnSend.setAttribute(
+  "data-sitekey",
+  "6LevFzYoAAAAAAULqxbRdA8rTmtz3PK5dOiGGLuB"
+);
+btnSend.setAttribute("data-callback", "onSubmit");
 /*=============== SHOW SCROLL UP ===============*/
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
