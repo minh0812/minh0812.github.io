@@ -226,7 +226,7 @@ img {
   }
   .nav__menu {
     position: fixed;
-    top: -100%;
+    top: -150%;
     left: 0;
     background-color: rgba(0, 0, 0, 0.75);
     width: 100%;
@@ -612,13 +612,13 @@ img {
   gap: 2.5rem;
 }
 
-.experience__box{
+.experience__box {
   padding: 1.5rem 0;
   border: rgb(163, 163, 163) 0.1rem solid;
   border-radius: 2rem;
 }
 
-.experience__box__title{
+.experience__box__title {
   text-align: center;
   width: fit-content;
   margin: 0 auto;
@@ -627,28 +627,28 @@ img {
 }
 
 .experience__box__title::after,
-.experience__box__title::before{
+.experience__box__title::before {
   content: "";
   width: 3rem;
-  height: .4rem;
+  height: 0.4rem;
   background-color: var(--first-color);
   position: absolute;
   z-index: -1;
   transition: width 1s ease;
 }
 
-.experience__box__title::after{
+.experience__box__title::after {
   left: 0;
   bottom: -1rem;
 }
 
-.experience__box__title::before{
+.experience__box__title::before {
   right: 0;
   top: -1rem;
 }
 
 .experience__box:hover .experience__box__title::after,
-.experience__box:hover .experience__box__title::before{
+.experience__box:hover .experience__box__title::before {
   width: 100%;
 }
 
@@ -675,17 +675,88 @@ img {
   background-color: var(--first-color);
   position: absolute;
   left: 50%;
-  bottom: -.5rem;
-  transition: width .5s ease;
+  bottom: -0.5rem;
+  transition: width 0.5s ease;
 }
 
 .experience__tabs article:hover::after {
   width: 50%;
 }
 
+.article__box {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--first-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 1.2rem;
+  top: 0.6rem;
+  z-index: -1;
+}
 
 /*=============== PROJECTS ===============*/
+.projects{
+  background-color: var(--container-color);
+  transition: background-color 0.4s ease;
+}
 
+.projects__container {
+  row-gap: 2rem;
+}
+
+.projects__card{
+  padding: 1rem 1rem 2rem;
+  transition: background-color 0.4s ease;
+}
+
+.projects__image{
+  position: relative;
+  margin-bottom: .75rem;
+}
+
+.projects__button{
+  position: absolute;
+  right: 1rem;
+  bottom: -1.5rem;
+  padding: 1rem;
+}
+
+.projects__content{
+  margin-bottom: 1.25rem;
+}
+
+.projects__subtitle{
+  position: relative;
+  display: inline-block;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+  margin-bottom: .75rem;
+  padding-left: 1.75rem;
+}
+
+.projects__subtitle::after{
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: var(--text-color);
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.projects__title{
+  font-size: var(--h3-font-size);
+  margin-bottom: .75rem;
+}
+
+.projects__demo{
+  width: 10rem;
+}
+
+.projects__card:hover{
+  background-color: var(--white-color);
+}
 /*=============== CONTACT ===============*/
 
 /* Opaque placeholder */
