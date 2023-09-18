@@ -77,7 +77,8 @@ const sendEmail = (e) => {
     );
 };
 
-btnSend.setAttribute("data-callback", "sendEmail(event)");
+contactForm.addEventListener("submit", sendEmail);
+
 /*=============== SHOW SCROLL UP ===============*/
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/

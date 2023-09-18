@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-     <!--=============== GOOGLE CAPTCHA ===============-->
-     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
     <!--=============== FAVICON ===============-->
     <link
       rel="shortcut icon"
@@ -25,6 +22,12 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
 
     <title>Phạm Duy Minh</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("contact-form").submit();
+      }
+    </script>
   </head>
 
   <body>
@@ -518,6 +521,8 @@
 
               <button
                 class="contact__button button g-recaptcha"
+                type="submit"
+                data-callback="onSubmit"
               >
                 <i class="ri-send-plane-line"></i> Send Message
               </button>
