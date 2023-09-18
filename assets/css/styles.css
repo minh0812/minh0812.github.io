@@ -893,6 +893,11 @@ img {
   background-color: var(--first-color);
   cursor: pointer;
 }
+
+.contact__button:disabled {
+  background-color: var(--black-color-light);
+  cursor: not-allowed;
+}
 /* Opaque placeholder */
 .contact__input:focus::placeholder {
   opacity: 0;

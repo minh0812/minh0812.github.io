@@ -40,12 +40,6 @@ window.addEventListener("scroll", shadowHeader);
 /*=============== EMAIL JS ===============*/
 const contactForm = document.getElementById("contact-form");
 const contactMessage = document.getElementById("contact-message");
-const btnSend = document.getElementsByClassName("g-recaptcha")[0];
-
-btnSend.setAttribute(
-  "data-sitekey",
-  "6LevFzYoAAAAAAULqxbRdA8rTmtz3PK5dOiGGLuB"
-);
 
 const sendEmail = (e) => {
   e.preventDefault();
