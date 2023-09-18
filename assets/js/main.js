@@ -37,7 +37,31 @@ const shadowHeader = () =>{
 }
 window.addEventListener('scroll', shadowHeader)
 /*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById('contact-form')
+const contactMessage = document.getElementById('contact-message')
 
+const sendEmail = (e) =>{
+  e.preventDefault()
+  // service id, template id, form, public key
+  emailjs.sendForm('service_jc9nd2h', 'template_jiin5n5', contactForm, 'bJGLfO20ad8dY_bas')
+  .then((result) => {
+      console.log(result);
+      contactMessage.innerHTML = 'Message sent successfully ✅'
+      setTimeout(() => {
+        contactMessage.innerHTML = ''
+      }, 5000);
+      // reset form
+      contactForm.reset()
+  }, (error) => {
+      console.log(error);
+      contactMessage.innerHTML = 'Message not sent (service error) ❌'
+      setTimeout(() => {
+        contactMessage.innerHTML = ''
+      }, 5000);
+  });
+}
+
+contactForm.addEventListener('submit', sendEmail)
 /*=============== SHOW SCROLL UP ===============*/
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
