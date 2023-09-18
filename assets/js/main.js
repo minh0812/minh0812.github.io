@@ -44,7 +44,7 @@ const btnSendMessage = document.getElementById("contact-button");
 
 const sendEmail = (e) => {
   e.preventDefault();
-  btnSendMessage.innerHTML = "Sending...";
+  btnSendMessage.innerHTML = "<i class='ri-send-plane-line'></i> Sending...";
   btnSendMessage.disabled = true;
   // service id, template id, form, public key
   emailjs
@@ -63,7 +63,8 @@ const sendEmail = (e) => {
         }, 5000);
         // reset form
         contactForm.reset();
-        btnSendMessage.innerHTML = "Send Message";
+        btnSendMessage.innerHTML =
+          "<i class='ri-send-plane-line'></i> Send Message";
         btnSendMessage.disabled = false;
       },
       (error) => {
@@ -72,7 +73,8 @@ const sendEmail = (e) => {
         setTimeout(() => {
           contactMessage.innerHTML = "";
         }, 5000);
-        btnSendMessage.innerHTML = "Send Message";
+        btnSendMessage.innerHTML =
+          "<i class='ri-send-plane-line'></i> Send Message";
         btnSendMessage.disabled = false;
       }
     );
