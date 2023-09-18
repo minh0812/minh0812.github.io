@@ -56,26 +56,23 @@ const sendEmail = (e) => {
     )
     .then(
       (result) => {
-        console.log(result);
         contactMessage.innerHTML = "Message sent successfully ✅";
         setTimeout(() => {
           contactMessage.innerHTML = "";
         }, 5000);
         // reset form
         contactForm.reset();
+        grecaptcha.reset();
         btnSendMessage.innerHTML =
           "<i class='ri-send-plane-line'></i> Send Message";
-        btnSendMessage.disabled = false;
       },
       (error) => {
-        console.log(error);
         contactMessage.innerHTML = "Message not sent (service error) ❌";
         setTimeout(() => {
           contactMessage.innerHTML = "";
         }, 5000);
         btnSendMessage.innerHTML =
           "<i class='ri-send-plane-line'></i> Send Message";
-        btnSendMessage.disabled = false;
       }
     );
 };
