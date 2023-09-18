@@ -77,7 +77,7 @@ btnSend.setAttribute(
   "data-sitekey",
   "6LevFzYoAAAAAAULqxbRdA8rTmtz3PK5dOiGGLuB"
 );
-btnSend.setAttribute("data-callback", "onSubmit");
+btnSend.setAttribute("data-callback", "sendEmail");
 /*=============== SHOW SCROLL UP ===============*/
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
