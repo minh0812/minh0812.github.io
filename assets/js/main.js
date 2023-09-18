@@ -42,6 +42,11 @@ const contactForm = document.getElementById("contact-form");
 const contactMessage = document.getElementById("contact-message");
 const btnSend = document.getElementsByClassName("g-recaptcha")[0];
 
+btnSend.setAttribute(
+  "data-sitekey",
+  "6LevFzYoAAAAAAULqxbRdA8rTmtz3PK5dOiGGLuB"
+);
+
 const sendEmail = (e) => {
   e.preventDefault();
   // service id, template id, form, public key
@@ -72,11 +77,6 @@ const sendEmail = (e) => {
     );
 };
 
-contactForm.addEventListener("submit", sendEmail);
-btnSend.setAttribute(
-  "data-sitekey",
-  "6LevFzYoAAAAAAULqxbRdA8rTmtz3PK5dOiGGLuB"
-);
 btnSend.setAttribute("data-callback", "sendEmail");
 /*=============== SHOW SCROLL UP ===============*/
 
