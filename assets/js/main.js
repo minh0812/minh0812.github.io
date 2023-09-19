@@ -148,3 +148,20 @@ themeButton.addEventListener("click", () => {
   themeButton.classList.toggle("ri-sun-line");
 });
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2500,
+  delay: 400,
+  // reset: true, // to repeat animation
+});
+
+sr.reveal(
+  ".home__perfil, .about__image, .contact__mail, #experience-box-right",
+  { origin: "right" }
+);
+sr.reveal(
+  ".home__name, .home__info, .about__container, .section__title-1, .about__info, .contact__social, .contact__data, #experience-box-left",
+  { origin: "left" }
+);
+sr.reveal(".projects__card, .section__title-2", { interval: 100 });

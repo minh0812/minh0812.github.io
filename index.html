@@ -69,7 +69,9 @@
             </li>
 
             <li class="nav__item">
-              <a href="#contact" class="nav__link nav__link-button">Contact Me</a>
+              <a href="#contact" class="nav__link nav__link-button"
+                >Contact Me</a
+              >
             </li>
           </ul>
           <!-- Close button -->
@@ -225,7 +227,7 @@
         </h2>
 
         <div class="experience__container container grid">
-          <div class="experience__box">
+          <div class="experience__box" id="experience-box-left">
             <h2 class="experience__box__title section__title-3">Front End</h2>
             <div class="experience__tabs">
               <article>
@@ -302,7 +304,7 @@
               </article>
             </div>
           </div>
-          <div class="experience__box">
+          <div class="experience__box" id="experience-box-right">
             <h2 class="experience__box__title section__title-3">Back End</h2>
             <div class="experience__tabs">
               <article>
@@ -529,7 +531,7 @@
                 ></textarea>
                 <label for="message" class="contact__label"> Message </label>
               </div>
-              
+
               <div
                 class="g-recaptcha"
                 data-sitekey="6LevFzYoAAAAAAULqxbRdA8rTmtz3PK5dOiGGLuB"
@@ -557,12 +559,12 @@
             />
 
             <div class="contact__social-data">
-              <div class="contact__social-description-1">
-                Does not send email
-              </div>
+              <div>
+                <p class="contact__social-description-1">Does not send email</p>
 
-              <div class="contact__social-description-2">
-                Write me on any of my social networks
+                <p class="contact__social-description-2">
+                  Write me on any of my social networks
+                </p>
               </div>
 
               <div class="contact__social-links">
@@ -603,7 +605,7 @@
       <i class="ri-arrow-up-s-line"></i>
     </a>
     <!--=============== SCROLLREVEAL ===============-->
-    <script src=""></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <!--=============== EMAIL JS ===============-->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!--=============== MAIN JS ===============-->
