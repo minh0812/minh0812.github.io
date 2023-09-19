@@ -29,6 +29,15 @@
           document.querySelector("#contact-button").disabled = false;
         }
       }
+
+      function reVerify() {
+        grecaptcha.reset();
+        document.querySelector("#contact-button").disabled = true;
+      }
+
+      function tokenExpired() {
+        document.querySelector("#contact-button").disabled = true;
+      }
     </script>
   </head>
 
@@ -520,7 +529,13 @@
               </div>
 
               <p class="contact__message" id="contact-message"></p>
-              <div class="g-recaptcha" data-sitekey="6LevFzYoAAAAAAULqxbRdA8rTmtz3PK5dOiGGLuB" data-callback="enableBtn"></div>
+              <div
+                class="g-recaptcha"
+                data-sitekey="6LevFzYoAAAAAAULqxbRdA8rTmtz3PK5dOiGGLuB"
+                data-callback="enableBtn"
+                data-expired-callback="tokenExpired"
+                data-error-callback="reVerify"
+              ></div>
               <button
                 class="contact__button button"
                 id="contact-button"
