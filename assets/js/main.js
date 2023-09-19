@@ -81,9 +81,70 @@ const sendEmail = (e) => {
 contactForm.addEventListener("submit", sendEmail);
 
 /*=============== SHOW SCROLL UP ===============*/
+const scrollUp = () => {
+  const scrollUp = document.getElementById("scroll-up");
+  // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
+  this.scrollY >= 350
+    ? scrollUp.classList.add("show-scroll")
+    : scrollUp.classList.remove("show-scroll");
+};
+
+window.addEventListener("scroll", scrollUp);
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll("section[id]");
+
+const scrollActive = () => {
+  const scrollDown = window.scrollY;
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight,
+      sectionTop = current.offsetTop - 58,
+      sectionId = current.getAttribute("id"),
+      sectionsClass = document.querySelector(
+        ".nav__menu a[href*=" + sectionId + "]"
+      );
+
+    if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+      sectionsClass.classList.add("active-link");
+    } else {
+      sectionsClass.classList.remove("active-link");
+    }
+  });
+};
+window.addEventListener("scroll", scrollActive);
 
 /*=============== DARK LIGHT THEME ===============*/
+// get current theme of browser
+const isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+const themeButton = document.getElementById("theme-button");
 
+const darkTheme = () => {
+  // Add or remove the dark / icon theme
+  document.body.classList.add("dark-theme");
+  themeButton.classList.add("ri-moon-line");
+  themeButton.classList.remove("ri-sun-line");
+};
+
+const lightTheme = () => {
+  // Add or remove the dark / icon theme
+  document.body.classList.remove("dark-theme");
+  themeButton.classList.remove("ri-moon-line");
+  themeButton.classList.add("ri-sun-line");
+};
+
+isDarkTheme?.matches ? darkTheme() : lightTheme();
+
+// Detect the dark mode
+isDarkTheme.addEventListener("change", () => {
+  isDarkTheme.matches ? darkTheme() : lightTheme();
+});
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener("click", () => {
+  // Add or remove the dark / icon theme
+  document.body.classList.toggle("dark-theme");
+  themeButton.classList.toggle("ri-moon-line");
+  themeButton.classList.toggle("ri-sun-line");
+});
 /*=============== SCROLL REVEAL ANIMATION ===============*/
