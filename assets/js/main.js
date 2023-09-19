@@ -133,7 +133,7 @@ const lightTheme = () => {
   themeButton.classList.add("ri-sun-line");
 };
 
-isDarkTheme?.matches ? darkTheme() : lightTheme();
+isDarkTheme.matches ? darkTheme() : lightTheme();
 
 // Detect the dark mode
 isDarkTheme.addEventListener("change", () => {
