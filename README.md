@@ -1,15 +1,9 @@
-# Responsive Portfolio Website Rian
-## [Watch it on youtube](https://youtu.be/-uQIBlaZ4P0)
-### Responsive Portfolio Website Rian
+# Portfolio Website
 
-- Responsive Personal Portfolio Website Using HTML CSS & JavaScript
-- Contains animations when scrolling.
-- Smooth scrolling in each section.
-- Includes a dark & light theme.
-- Sending emails in the contact section.
-- Developed first with the Mobile First methodology, then for desktop.
-- Compatible with all mobile devices and with a beautiful and pleasant user interface.
+## Forked from [bedimcode/responsive-portfolio-website-rian](https://github.com/bedimcode/responsive-portfolio-website-rian)
+### Portfolio Website
 
-💙 Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/@Bedimcode)
+Project using HTML, CSS, and JavaScript. This project is a portfolio website that has a home, about, experience, projects, and contact. The website is fully responsive and has a slide-out menu that is usable on mobile and tablet devices. The website is also cross-browser compatible and works on all major browsers.
 
-![preview img](/preview.png)
+
+![preview img](/review-website.jpeg)
