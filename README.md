@@ -1,6 +1,6 @@
 # Portfolio Website
 
-## Forked from [bedimcode/responsive-portfolio-website-rian](https://github.com/bedimcode/responsive-portfolio-website-rian)
+### Project is forked from [bedimcode/responsive-portfolio-website-rian](https://github.com/bedimcode/responsive-portfolio-website-rian)
 
 ### Portfolio Website
 
