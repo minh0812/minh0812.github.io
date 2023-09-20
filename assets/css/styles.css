@@ -773,6 +773,10 @@ body.dark-theme {
   z-index: -1;
 }
 
+.article__title {
+  min-width: 5rem;
+}
+
 /*=============== PROJECTS ===============*/
 .projects {
   background-color: var(--container-color);
@@ -835,6 +839,10 @@ body.dark-theme {
 
 .projects__card:hover {
   background-color: var(--white-color);
+}
+
+.projects__description{
+  height: 100px;
 }
 /*=============== CONTACT ===============*/
 .contact {
@@ -1153,6 +1161,10 @@ body.dark-theme {
 }
 
 @media screen and (max-width: 385px) {
+  .about__buttons {
+    column-gap: 0.5rem;
+  }
+
   .about__buttons .button {
     padding-inline: 0.5rem;
   }
@@ -1379,9 +1391,9 @@ body.dark-theme {
   }
 
   .home__arrow {
-    top: 4.5rem;
-    left: -8rem;
-    rotate: 80deg;
+    top: 2.5rem;
+    left: -7rem;
+    rotate: 70deg;
     width: 80px;
   }
 
