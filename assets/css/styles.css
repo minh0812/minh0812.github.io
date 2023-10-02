@@ -18,6 +18,8 @@
   --container-color: hsl(0, 0%, 83%);
   --selection-color: #79ffe1;
   --text-selection-color: var(--black-color);
+  --contact-data-color: hsl(0, 0%, 90%);
+  --contact-mail-color: hsl(0, 0%, 4%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -111,6 +113,8 @@ body.dark-theme {
   --container-color: hsl(0, 0%, 12%);
   --selection-color: var(--first-color);
   --text-selection-color: var(--white-color);
+  --contact-data-color: hsl(0, 0%, 10%);
+  --contact-mail-color: hsl(0, 0%, 10%);
 }
 /*========== 
 	Color changes in some parts of 
@@ -146,7 +150,7 @@ body.dark-theme {
 }
 
 .dark-theme :is(.contact__mail, .contact__input, .contact__label) {
-  background-color: var(--container-color);
+  background-color: var(--contact-mail-color);
 }
 
 .dark-theme .footer {
@@ -821,9 +825,28 @@ body.dark-theme {
 .projects__description {
   height: 100px;
 }
+
+/*=============== MUSIC ===============*/
+.music {
+  margin-bottom: 1.5rem;
+}
+
+.music__title-sub{
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto 2.5rem;
+  padding: 0 1rem;
+  letter-spacing: 0.5px;
+}
+
+.music__container{
+  row-gap: 2rem;
+}
+
 /*=============== CONTACT ===============*/
 .contact {
   padding-bottom: 0;
+  background-color: var(--container-color);
 }
 
 .contact__container {
@@ -836,7 +859,7 @@ body.dark-theme {
   position: relative;
   width: 300px;
   height: 300px;
-  background-color: var(--container-color);
+  background-color: var(--contact-data-color);
   padding: 3rem 1.5rem 3.5rem;
   margin-left: auto;
   border-bottom: 4px solid var(--first-color);
@@ -867,7 +890,7 @@ body.dark-theme {
 
 .contact__mail {
   position: relative;
-  background-color: var(--black-color);
+  background-color: var(--contact-mail-color);
   padding: 5rem 1.5rem 2.5rem;
   margin-top: -2.5rem;
   transition: background-color 0.4s ease;

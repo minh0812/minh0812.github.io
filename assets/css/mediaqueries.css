@@ -130,6 +130,11 @@
   .projects__container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .music__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
 }
 
 /* For large devices */
@@ -496,7 +501,7 @@
   }
 
   .dark-theme .contact__social {
-    background-color: var(--body-color);
+    background-color: var(--container-color);
   }
 
   .footer__container {
