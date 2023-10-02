@@ -16,6 +16,8 @@
   --text-color-light: hsl(0, 0%, 64%);
   --body-color: hsl(0, 0%, 87%);
   --container-color: hsl(0, 0%, 83%);
+  --selection-color: #79ffe1;
+  --text-selection-color: var(--black-color);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -48,6 +50,11 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--selection-color);
+  color: var(--text-selection-color);
 }
 
 body {
@@ -102,6 +109,8 @@ body.dark-theme {
   --text-color: hsl(0, 0%, 70%);
   --body-color: hsl(0, 0%, 8%);
   --container-color: hsl(0, 0%, 12%);
+  --selection-color: var(--first-color);
+  --text-selection-color: var(--white-color);
 }
 /*========== 
 	Color changes in some parts of 
